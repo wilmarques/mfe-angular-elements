@@ -30,7 +30,6 @@
       }
     ]
   },
-  "defaultProject": "container",
   "generators": {
     "@nrwl/web:application": {
       "style": "css",
