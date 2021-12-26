@@ -10,8 +10,12 @@
   - `npx nx server container`
 - Remove web app container to change for VueJS
   - `npx nx generate remove container`
+- Instalar VueJS plugin peer dependencies
+  - `npm install @nrwl/cypress@^12.0.0 @nrwl/jest@^12.0.0 @nrwl/linter@^12.0.0 --save-dev`
+  - **Cancelado**
 - Instalar VueJS plugin
-  - 
+  - `npm install @nx-plus/vue --save-dev --force`
+  - Teve que forçar pq ainda não suporta Nx 13, apenas 12
 - Generate VueJS container app
   - `npx nx generate @nx-plus/vue:app container`
 - Changing the container app layout
