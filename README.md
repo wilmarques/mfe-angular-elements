@@ -20,7 +20,9 @@
   - Não funcionou porque o plugin pra Vue ainda não suporta Nx 12
   - Mudarei para React
 - Instalar React plugin
+  - `npm install --save-dev @nrwl/react`
 - Generate React container app
+  - `npx nx generate @nrwl/react:app container --e2eTestRunner=none --unitTestRunner=none --no-interactive`
 - Run the container app
   - `npx nx server container`
 - Changing the container app layout
