@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/web:webpack",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "defaultConfiguration": "production",
       "options": {
         "compiler": "babel",
@@ -19,7 +21,10 @@
           "apps/container/src/favicon.ico",
           "apps/container/src/assets"
         ],
-        "styles": ["apps/container/src/styles.css"],
+        "styles": [
+          "node_modules/@picocss/pico/css/pico.classless.css",
+          "apps/container/src/styles.css"
+        ],
         "scripts": [],
         "webpackConfig": "@nrwl/react/plugins/webpack"
       },
@@ -55,9 +60,13 @@
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
-      "outputs": ["{options.outputFile}"],
+      "outputs": [
+        "{options.outputFile}"
+      ],
       "options": {
-        "lintFilePatterns": ["apps/container/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/container/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     }
   },
