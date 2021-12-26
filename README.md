@@ -4,14 +4,23 @@
   - `npx --ignore-existing create-nx-workspace mfe-angular-elements-educative --preset=empty`
 - Instalar web plugin
   - `npm install --save-dev @nrwl/web`
+  - **Cancelado**
 - Generate container app
   - `npx nx generate @nrwl/web:app container --e2eTestRunner=none --no-interactive`
-- Run the container app
-  - `npx nx server container`
+  - **Cancelado**
 - Remove web app container to change for VueJS
   - `npx nx generate remove container`
 - Instalar VueJS plugin
-  - 
+  - `npm install @nx-plus/vue --save-dev --force`
+  - Teve que forçar pq ainda não suporta Nx 13, apenas 12
+  - **Cancelado**
 - Generate VueJS container app
   - `npx nx generate @nx-plus/vue:app container`
+  - **Cancelado**
+  - Não funcionou porque o plugin pra Vue ainda não suporta Nx 12
+  - Mudarei para React
+- Instalar React plugin
+- Generate React container app
+- Run the container app
+  - `npx nx server container`
 - Changing the container app layout
