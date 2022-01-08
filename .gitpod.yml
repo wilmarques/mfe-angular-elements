@@ -1,4 +1,17 @@
+tasks:
+  - name: Nx
+    before: |
+      npm i -g nx
+    init: |
+      npm i
+
+ports:
+  - port: 4200
+    onOpen: open-browser
 
 vscode:
   extensions:
     - nrwl.angular-console
+    - esbenp.prettier-vscode
+    - dbaeumer.vscode-eslint
+    - angular.ng-template
