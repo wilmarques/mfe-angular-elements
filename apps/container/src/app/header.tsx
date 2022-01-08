@@ -1,4 +1,4 @@
-export function Header() {
+export default function Header() {
   return (
     <nav>
       <ul>
@@ -11,5 +11,3 @@ export function Header() {
     </nav>
   );
 }
-
-export default Header;

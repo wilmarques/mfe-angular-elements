@@ -1,4 +1,4 @@
-export function Profile() {
+export default function Profile() {
   return (
     <>
       <h2>Profile</h2>
@@ -26,5 +26,3 @@ export function Profile() {
     </>
   );
 }
-
-export default Profile;

@@ -1,17 +1,17 @@
 import styles from './app.module.css';
 
-import Header from './header/header';
-import Home from './home/home';
-import Profile from './profile/profile';
+import Header from './header';
+import Home from './home';
+import Profile from './profile';
 
-export function App() {
+export default function App() {
   return (
     <>
       <Header></Header>
       <main>
         <section>
           {/* <Home></Home> */}
-          <Profile></Profile>
+          {/* <Profile></Profile> */}
           {/* <hgroup>
             <nav>
               <ul>
@@ -80,5 +80,3 @@ export function App() {
     </>
   );
 }
-
-export default App;
