@@ -1,5 +1,3 @@
-import './home.module.scss';
-
 export function Home() {
   return (
     <>
