@@ -39,6 +39,8 @@
     - Don't do this in production
   - 
 - Creating header component
-  - `nx generate @nrwl/react:component --name=header --project=container --style=scss --skipTests`
+  - `nx generate @nrwl/react:component --name=header --project=container --style=none --skipTests --no-interactive`
 - Creating home component
-  - `nx generate @nrwl/react:component --name=home --project=container --style=scss --skipTests`
+  - `nx generate @nrwl/react:component --name=home --project=container --style=none --skipTests --no-interactive`
+- Creating profile component
+  - `nx generate @nrwl/react:component --name=profile --project=container --style=none --skipTests --no-interactive`
