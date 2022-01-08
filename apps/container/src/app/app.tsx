@@ -1,8 +1,7 @@
+import { Outlet } from 'react-router-dom';
 import styles from './app.module.css';
 
 import Header from './header';
-import Home from './home';
-import Profile from './profile';
 
 export default function App() {
   return (
@@ -10,8 +9,7 @@ export default function App() {
       <Header></Header>
       <main>
         <section>
-          {/* <Home></Home> */}
-          {/* <Profile></Profile> */}
+          <Outlet />
           {/* <hgroup>
             <nav>
               <ul>
