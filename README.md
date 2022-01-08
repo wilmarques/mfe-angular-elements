@@ -39,4 +39,4 @@
     - Don't do this in production
   - 
 - Creating header component
-  - `nx g @nrwl/react:component my-component --project=container`
+  - `nx generate @nrwl/react:component --name=header --project=container --style=scss --skipTests`

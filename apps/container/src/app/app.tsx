@@ -1,15 +1,11 @@
 import styles from './app.module.css';
 
+import Header from './header/header';
+
 export function App() {
   return (
     <>
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Profile</li>
-          <li><mark>Contacts</mark></li>
-        </ul>
-      </nav>
+      <Header></Header>
       <main>
         <section>
           {/* <h2>Home</h2>
