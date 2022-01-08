@@ -1,6 +1,7 @@
 import styles from './app.module.css';
 
 import Header from './header/header';
+import Home from './home/home';
 
 export function App() {
   return (
@@ -8,9 +9,7 @@ export function App() {
       <Header></Header>
       <main>
         <section>
-          {/* <h2>Home</h2>
-          <p>Welcome to <strong>Micro Front-Ends using Angular Elements</strong> course!</p>
-          <p>See more at <a href='https://educative.io'>https://educative.io</a></p> */}
+          <Home></Home>
           {/* <h2>Profile</h2>
           <form>
             <label htmlFor="firstname">First name</label>
@@ -58,14 +57,14 @@ export function App() {
               <li><a href="#">Delete</a></li>
             </ul>
           </nav> */}
-          <h2>Edit Contact</h2>
+          {/* <h2>Edit Contact</h2>
           <form>
             <label htmlFor="firstname">First name</label>
             <input type="text" name="firstname" placeholder="First name" aria-label="First name" required />
             <label htmlFor="lastname">Last name</label>
             <input type="text" name="lastname" placeholder="Last name" aria-label="Last name" required />
             <button type="submit">Save</button>
-          </form>
+          </form> */}
           {/* <script>
             // Get the root element
                         var r = document.querySelector(':root');

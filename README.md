@@ -40,3 +40,5 @@
   - 
 - Creating header component
   - `nx generate @nrwl/react:component --name=header --project=container --style=scss --skipTests`
+- Creating home component
+  - `nx generate @nrwl/react:component --name=home --project=container --style=scss --skipTests`
