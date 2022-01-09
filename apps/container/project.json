@@ -22,7 +22,6 @@
           "apps/container/src/assets"
         ],
         "styles": [
-          "node_modules/@picocss/pico/css/pico.classless.css",
           "apps/container/src/styles.css"
         ],
         "scripts": [],
