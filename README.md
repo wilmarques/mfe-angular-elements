@@ -2,20 +2,20 @@
 
 - Generate workspace
   - `npx --ignore-existing create-nx-workspace mfe-angular-elements-educative --preset=empty`
-- **Cancelado** - Instalar web plugin
+- **Canceled** - Install web plugin
   - `npm install --save-dev @nrwl/web`
-- **Cancelado** - Generate container app
+- **Canceled** - Generate container app
   - `npx nx generate @nrwl/web:app container --e2eTestRunner=none --no-interactive`
 - Remove web app container to change for VueJS
   - `npx nx generate remove container`
-- **Cancelado** - Instalar VueJS plugin
+- **Canceled** - Install VueJS plugin
   - `npm install @nx-plus/vue --save-dev --force`
-  - Teve que forçar pq ainda não suporta Nx 13, apenas 12
-- **Cancelado** - Generate VueJS container app
+  - Had to force because VueJS plugin doesn't support Nx 13 yet, only version 12
+- **Canceled** - Generate VueJS container app
   - `npx nx generate @nx-plus/vue:app container`
-  - Não funcionou porque o plugin pra Vue ainda não suporta Nx 12
-  - Mudarei para React
-- Instalar React plugin
+  - Didn't work because VueJS plugin doesn't support Nx 13 yet
+  - Will change to React
+- Install React plugin
   - `npm install --save-dev @nrwl/react`
 - Generate React container app
   - `npx nx generate @nrwl/react:app container --e2eTestRunner=none --unitTestRunner=none --no-interactive`
@@ -24,8 +24,8 @@
 - Changing the container app layout
 - Removing the initial component
   - `rm -rf apps/container/src/app/nx-welcome.tsx`
-  - Também precisa apagar as referências ao componente no App component
-- **Cancelado** - Installing Tailwind on container app
+  - Also need to remove its references on `AppComponent`
+- **Canceled** - Installing Tailwind on container app
   - Installing Tailwind dependencies
   - `npm install tailwindcss@latest postcss@latest autoprefixer@latest`
   - Initializing on container app
@@ -49,10 +49,18 @@
 - Creating a Custom Element without Angular
   - Adding a web project to workspace
   - `npm install -D @nrwl/web`
-  - `nx generate @nrwl/web:app mfe-web --e2eTestRunner=none --unitTestRunner=none --no-interactive`
+  - `nx generate @nrwl/web:app mfe-web --e2eTestRunner=none --unitTestRunner=none --port=4201 --no-interactive`
   - Also changed the `AppElement` file
   - Had to change the port that this project is going to be served during development
   - Changed it on `project.json` file, `port` property
 - Embedding the Custom Element on container app
   - Creating a mfe-container component
-  - `nx generate @nrwl/react:component --name=mfe-container --project=container --style=none --skipTests --flat --no-interactive`
+    - `nx generate @nrwl/react:component --name=mfe-container --project=container --style=none --skipTests --flat --no-interactive`
+  - Loading Custom Element
+    - Had to customize the webpack config
+      - file: `apps/mfe-web/webpack/web.config.js`
+      - It had to be done because `webpackChunk` conflicts on different bundles
+      - Property `output.uniqueName` on webpack config determines `webpackChunk` name
+    - Getting an error when going out of Contacts page and returning to it
+      - `CustomElementRegistry.define: 'mfe-web' has already been defined as a custom element`
+      - MfeContainer loader needs to verify if an element is already loaded

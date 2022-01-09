@@ -18,7 +18,8 @@
         "tsConfig": "apps/mfe-web/tsconfig.app.json",
         "assets": ["apps/mfe-web/src/favicon.ico", "apps/mfe-web/src/assets"],
         "styles": ["apps/mfe-web/src/styles.css"],
-        "scripts": []
+        "scripts": [],
+        "webpackConfig": "apps/mfe-web/webpack/web.config.js"
       },
       "configurations": {
         "production": {
