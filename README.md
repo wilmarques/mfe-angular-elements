@@ -46,3 +46,10 @@
 - Adding routing
   - `npm install react-router-dom@6`
   - Reflected the current item on navbar using React Router hooks
+- Creating a Custom Element without Angular
+  - Adding a web project to workspace
+  - `npm install -D @nrwl/web`
+  - `nx generate @nrwl/web:app mfe-web --e2eTestRunner=none --unitTestRunner=none --no-interactive`
+  - Also changed the `AppElement` file
+  - Had to change the port that this project is going to be served during development
+  - Changed it on `project.json` file, `port` property
