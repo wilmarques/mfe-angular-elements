@@ -38,11 +38,11 @@
   - Changing root element to body
     - Don't do this in production
 - Creating header component
-  - `nx generate @nrwl/react:component --name=header --project=container --style=none --skipTests --no-interactive`
+  - `nx generate @nrwl/react:component --name=header --project=container --style=none --skipTests --flat --no-interactive`
 - Creating home component
-  - `nx generate @nrwl/react:component --name=home --project=container --style=none --skipTests --no-interactive`
+  - `nx generate @nrwl/react:component --name=home --project=container --style=none --skipTests --flat --no-interactive`
 - Creating profile component
-  - `nx generate @nrwl/react:component --name=profile --project=container --style=none --skipTests --no-interactive`
+  - `nx generate @nrwl/react:component --name=profile --project=container --style=none --skipTests --flat --no-interactive`
 - Adding routing
   - `npm install react-router-dom@6`
   - Reflected the current item on navbar using React Router hooks
@@ -53,3 +53,6 @@
   - Also changed the `AppElement` file
   - Had to change the port that this project is going to be served during development
   - Changed it on `project.json` file, `port` property
+- Embedding the Custom Element on container app
+  - Creating a mfe-container component
+  - `nx generate @nrwl/react:component --name=mfe-container --project=container --style=none --skipTests --flat --no-interactive`

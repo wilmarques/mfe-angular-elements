@@ -10,9 +10,9 @@ export default function Header() {
         <li>
           <MarkLink to="profile">Profile</MarkLink>
         </li>
-        {/* <li>
-          <mark>Contacts</mark>
-        </li> */}
+        <li>
+          <MarkLink to="contacts">Contacts</MarkLink>
+        </li>
       </ul>
     </nav>
   );
