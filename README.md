@@ -71,3 +71,4 @@
 - Move contacts Page to Angular App
   - Run the app to see it on port 4201
 - Remove mfe-web
+  - `nx generate remove mfe-web`
