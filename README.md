@@ -72,3 +72,8 @@
   - Run the app to see it on port 4201
 - Remove mfe-web
   - `nx generate remove mfe-web`
+- Converting the Angular app to Angular Element
+  - `npm install @angular/elements --save`
+  - `ng add @angular/elements` doesn't work on Angular 13 anymore
+    - <https://github.com/angular/angular/commit/619b7cc3857b34598a0036f8ebf9bc2eb27f5507>
+  - In Angular doesn't need to customize Webpack config, the chunk are already named correctly
