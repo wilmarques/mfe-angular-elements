@@ -2,7 +2,7 @@
   "projectType": "application",
   "root": "apps/contacts",
   "sourceRoot": "apps/contacts/src",
-  "prefix": "mfe-angular-elements-educative",
+  "prefix": "contacts",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
