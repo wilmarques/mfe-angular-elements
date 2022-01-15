@@ -4,13 +4,13 @@ declare global {
   /* eslint-disable-next-line @typescript-eslint/no-namespace */
   namespace JSX {
     interface IntrinsicElements {
-      'mfe-web': unknown;
+      'contacts-element': unknown;
     }
   }
 }
 
 export default function MfeContainer() {
-  const mfeWeb = useRef();
+  const contactsElement = useRef();
 
   useEffect(() => {
     const loadMfeElementScript = (scriptName: string): HTMLScriptElement => {
@@ -28,7 +28,7 @@ export default function MfeContainer() {
     ): HTMLScriptElement => document.body.removeChild(scriptElement);
 
     const scriptElements = [
-      loadMfeElementScript('styles.css'),
+      // loadMfeElementScript('styles.css'),
       loadMfeElementScript('runtime.js'),
       loadMfeElementScript('polyfills.js'),
       loadMfeElementScript('styles.js'),
@@ -45,5 +45,5 @@ export default function MfeContainer() {
     };
   });
 
-  return <mfe-web ref={mfeWeb}></mfe-web>;
+  return <contacts-element ref={contactsElement}></contacts-element>;
 }
