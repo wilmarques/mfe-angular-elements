@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "contacts": "apps/contacts",
     "container": "apps/container",
     "mfe-web": "apps/mfe-web"
   }
