@@ -66,7 +66,7 @@
       - MfeContainer loader needs to verify if an element is already loaded
 - Adding an Angular app to the workspace
   - Install Angular plugin `npm install --save-dev @nrwl/angular`
-  - Create Angular App `nx generate @nrwl/angular:app contacts --e2eTestRunner=none --unitTestRunner=none --port=4201 --no-interactive`
+  - Create Angular App `nx generate @nrwl/angular:app contacts --prefix=contacts --e2eTestRunner=none --unitTestRunner=none --port=4201 --no-interactive`
   - Run the app to see if its okay
 - Move contacts Page to Angular App
   - Run the app to see it on port 4201
