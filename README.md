@@ -78,3 +78,6 @@
     - <https://github.com/angular/angular/commit/619b7cc3857b34598a0036f8ebf9bc2eb27f5507>
 - Loading Angular Element on Container app
   - In Angular doesn't need to customize Webpack config, the chunk are already named correctly
+- Structuring the Angular Element project
+  - Trying to style the list of contacts to seems bette and still don't break HTML semantics
+  - Pico was turned on, but have to be turned off later

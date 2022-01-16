@@ -10,9 +10,9 @@ import { AppComponent } from './app.component';
   providers: [],
 })
 export class AppModule implements DoBootstrap {
-  
+
   constructor(private injector: Injector) {}
-  
+
   public ngDoBootstrap() {
     const element = createCustomElement(AppComponent, {
       injector: this.injector,
