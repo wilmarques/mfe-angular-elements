@@ -10,43 +10,6 @@ export default function App() {
       <main>
         <section>
           <Outlet />
-          {/* <hgroup>
-            <nav>
-              <ul>
-                <li><h2>Contacts</h2></li>
-              </ul>
-              <ul>
-                <li><a href="#" role="button">New contact</a></li>
-              </ul>
-            </nav>
-          </hgroup>
-          <nav>
-            <ul>
-              <li>First Contact</li>
-            </ul>
-            <ul>
-              <li><a href="#">Edit</a></li>
-              <li><a href="#">Delete</a></li>
-            </ul>
-          </nav>
-          <nav>
-            <ul>
-              <li>Second Contact</li>
-            </ul>
-            <ul>
-              <li><a href="#">Edit</a></li>
-              <li><a href="#">Delete</a></li>
-            </ul>
-          </nav>
-          <nav>
-            <ul>
-              <li>Third Contact</li>
-            </ul>
-            <ul>
-              <li><a href="#">Edit</a></li>
-              <li><a href="#">Delete</a></li>
-            </ul>
-          </nav> */}
           {/* <h2>Edit Contact</h2>
           <form>
             <label htmlFor="firstname">First name</label>

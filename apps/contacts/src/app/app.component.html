@@ -1,23 +1,11 @@
 <h2>Contacts</h2>
 
-<details>
-  <summary>First Contact</summary>
+<details *ngFor="let contact of contacts | async">
+  <summary>{{ contact.firstName }} {{ contact.lastName }}</summary>
   <article>
-    This is the First Contact
-    <footer><a href="#">Edit</a></footer>
-  </article>
-</details>
-<details>
-  <summary>Second Contact</summary>
-  <article>
-    This is the Second Contact
-    <footer><a href="#">Edit</a></footer>
-  </article>
-</details>
-<details>
-  <summary>Third Contact</summary>
-  <article>
-    This is the Third Contact
-    <footer><a href="#">Edit</a></footer>
+    {{ contact.description }}
+    <footer>
+      <a [routerLink]="['/edit', contact.id]">Edit</a>
+    </footer>
   </article>
 </details>

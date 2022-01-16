@@ -79,5 +79,15 @@
 - Loading Angular Element on Container app
   - In Angular doesn't need to customize Webpack config, the chunk are already named correctly
 - Structuring the Angular Element project
-  - Trying to style the list of contacts to seems bette and still don't break HTML semantics
-  - Pico was turned on, but have to be turned off later
+  - Contact list
+    - Trying to style the list of contacts to seems bette and still don't break HTML semantics
+    - Pico was turned on, but have to be turned off later
+    - Routing had to be added, but the changed the schematics on app creation
+  - Next steps
+    - Create the Contacts service to list and edit a contact
+    - Create the edit component
+      - A contact have to have first, last name and description
+    - Create the edit route pointing to this new component
+    - Configure the baseHref or deployUrl to match the container routing
+    - The images used on the first lessons also needs to be changed
+      - Those are referencing an old version of the app
