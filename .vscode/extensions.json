@@ -4,6 +4,7 @@
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
     "angular.ng-template",
-    "yzhang.markdown-all-in-one"
+    "yzhang.markdown-all-in-one",
+    "editorconfig.editorconfig"
   ]
 }
