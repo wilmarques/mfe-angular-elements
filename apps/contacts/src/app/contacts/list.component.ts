@@ -12,7 +12,7 @@ import { ContactsService } from './contacts.service';
       <article>
         {{ contact.description }}
         <footer>
-          <a [routerLink]="['/edit', contact.id]">Edit</a>
+          <a [routerLink]="['edit', contact.id]">Edit</a>
         </footer>
       </article>
     </details>

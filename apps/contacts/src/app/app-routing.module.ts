@@ -2,11 +2,16 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { ListComponent } from './contacts/list.component';
+import { EditComponent } from './contacts/edit.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'contacts',
     component: ListComponent,
+  },
+  {
+    path: 'contacts/edit/:id',
+    component: EditComponent,
   },
 ];
 

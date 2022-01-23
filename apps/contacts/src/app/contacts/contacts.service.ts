@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { find, from, Observable, of } from 'rxjs';
 
 import { Contact } from './contact';
 
@@ -27,6 +27,10 @@ export class ContactsService {
       description: 'This is the Third Contact',
     },
   ];
+
+  public getContactById(contactId: number): Observable<Contact | undefined> {
+    return from(this.contacts).pipe(find((c) => c.id === contactId));
+  }
 
   public listAll(): Observable<Array<Contact>> {
     return of(this.contacts);

@@ -92,10 +92,27 @@
       - If not set, when the user navigates to `/contacts` route the URL is replaced by `/`
       - `/contacts` route is located in the container app
       - `/` is the route controlled by the Angular Element
+  - Create the edit component
+    - `nx generate @schematics/angular:component --name=edit --project=contacts --style=none --flat --inlineTemplate --path=apps/contacts/src/app/contacts --skipTests --no-interactive`
+    - Had to add `'contacts'` at the start of the routes, to match the container route
+      - TODO: it needs to be removed
+    - When navigating away from the Contacts section (click on navbar) and returning to it, the internal Angular Elements routing are not being updated
+      - To reproduce
+      - Navigate to Contacts
+        - List of contacts are shown
+      - Click to Edit a contact
+        - A page to edit the selected contact are shown
+      - Click on another item on Navbar (eg: Profile)
+        - The contacts element is removed from the page
+      - Navigate again to Contacts
+        - The page that should be visible is the contact list
+        - But the last edited contacted is displayed instead
+        - Maybe a way to reflect the current route would be ok
+      - TODO: don't know what to do yet
+    - The initial navigation was changed to use the Router default
+      - The logic using `.navigate['']` had some problems
+      - But it's not the final version yet
   - Next steps
-    - Create the Contacts service to list and edit a contact
-    - Create the edit component
-      - A contact have to have first, last name and description
     - Create the edit route pointing to this new component
     - Configure the baseHref or deployUrl to match the container routing
     - The images used on the first lessons also needs to be changed
