@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { of } from 'rxjs';
+
+import { ContactsService } from './contacts/contacts.service';
 
 @Component({
   selector: 'contacts-root',
@@ -7,24 +8,7 @@ import { of } from 'rxjs';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  public contacts = of([
-    {
-      id: 1,
-      firstName: 'First',
-      lastName: 'Contact',
-      description: 'This is the First Contact',
-    },
-    {
-      id: 2,
-      firstName: 'Second',
-      lastName: 'Contact',
-      description: 'This is the Second Contact',
-    },
-    {
-      id: 3,
-      firstName: 'Third',
-      lastName: 'Contact',
-      description: 'This is the Third Contact',
-    },
-  ]);
+  constructor(private readonly contactsService: ContactsService) {}
+
+  public contacts = this.contactsService.getAll();
 }

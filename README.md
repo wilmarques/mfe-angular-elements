@@ -80,7 +80,7 @@
   - In Angular doesn't need to customize Webpack config, the chunk are already named correctly
 - Structuring the Angular Element project
   - Contact list
-    - Trying to style the list of contacts to seems bette and still don't break HTML semantics
+    - Trying to style the list of contacts to seems better and still don't break HTML semantics
     - Pico was turned on, but have to be turned off later
     - Routing had to be added, but the changed the schematics on app creation
   - Next steps
@@ -91,3 +91,5 @@
     - Configure the baseHref or deployUrl to match the container routing
     - The images used on the first lessons also needs to be changed
       - Those are referencing an old version of the app
+  - Creating Contacts Service
+    - `nx generate @schematics/angular:service --name=contacts --project=contacts --path=apps/contacts/src/app/contacts --skipTests --no-interactive`
