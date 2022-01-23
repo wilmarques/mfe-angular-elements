@@ -28,7 +28,7 @@ export class ContactsService {
     },
   ];
 
-  public getAll(): Observable<Array<Contact>> {
+  public listAll(): Observable<Array<Contact>> {
     return of(this.contacts);
   }
 

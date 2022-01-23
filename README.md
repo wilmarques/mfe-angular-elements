@@ -83,6 +83,15 @@
     - Trying to style the list of contacts to seems better and still don't break HTML semantics
     - Pico was turned on, but have to be turned off later
     - Routing had to be added, but the changed the schematics on app creation
+  - Creating Contacts Service
+    - `nx generate @schematics/angular:service --name=contacts --project=contacts --path=apps/contacts/src/app/contacts --skipTests --no-interactive`
+  - Moving Contact list to a List component and route
+    - `nx generate @schematics/angular:component --name=list --project=contacts --style=none --flat --inlineTemplate --path=apps/contacts/src/app/contacts --skipTests --no-interactive`
+    - It was needed to perform an initial navigation on `AppModule`, since we are controlling the Angular state by hand
+    - It was also necessary to navigate using `skipLocationChange: true` to not conflict with the container app routes
+      - If not set, when the user navigates to `/contacts` route the URL is replaced by `/`
+      - `/contacts` route is located in the container app
+      - `/` is the route controlled by the Angular Element
   - Next steps
     - Create the Contacts service to list and edit a contact
     - Create the edit component
@@ -91,5 +100,3 @@
     - Configure the baseHref or deployUrl to match the container routing
     - The images used on the first lessons also needs to be changed
       - Those are referencing an old version of the app
-  - Creating Contacts Service
-    - `nx generate @schematics/angular:service --name=contacts --project=contacts --path=apps/contacts/src/app/contacts --skipTests --no-interactive`
