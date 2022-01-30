@@ -66,7 +66,7 @@
       - MfeContainer loader needs to verify if an element is already loaded
 - Adding an Angular app to the workspace
   - Install Angular plugin `npm install --save-dev @nrwl/angular`
-  - Create Angular App `nx generate @nrwl/angular:app contacts --prefix=contacts --e2eTestRunner=none --unitTestRunner=none --port=4201 --no-interactive`
+  - Create Angular App `nx generate @nrwl/angular:app contacts --prefix=contacts --routing --e2eTestRunner=none --unitTestRunner=none --port=4201 --no-interactive`
   - Run the app to see if its okay
 - Move contacts Page to Angular App
   - Run the app to see it on port 4201
@@ -82,7 +82,7 @@
   - Contact list
     - Trying to style the list of contacts to seems better and still don't break HTML semantics
     - Pico was turned on, but have to be turned off later
-    - Routing had to be added, but the changed the schematics on app creation
+    - Routing had to be added, but I changed the schematics on app creation so this won't be needed in the future
   - Creating Contacts Service
     - `nx generate @schematics/angular:service --name=contacts --project=contacts --path=apps/contacts/src/app/contacts --skipTests --no-interactive`
   - Moving Contact list to a List component and route

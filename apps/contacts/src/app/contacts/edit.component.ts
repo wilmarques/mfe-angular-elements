@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { map, switchMap, tap } from 'rxjs';
@@ -44,7 +44,7 @@ import { ContactsService } from './contacts.service';
     <ng-template #notfound>Contact not found</ng-template>
   `,
 })
-export class EditComponent {
+export class EditComponent implements OnInit, OnDestroy {
   public form: FormGroup = this.formBuilder.group({
     firstName: ['', Validators.required],
     lastName: ['', Validators.required],
@@ -60,5 +60,15 @@ export class EditComponent {
     private readonly route: ActivatedRoute,
     private readonly contactsService: ContactsService,
     private readonly formBuilder: FormBuilder,
-  ) {}
+  ) {
+    console.log('edit - constructor');
+  }
+
+  public ngOnInit(): void {
+    console.log('edit - ngOnInit');
+  }
+
+  public ngOnDestroy(): void {
+    console.log('edit - ngOnDestroy');
+  }
 }
